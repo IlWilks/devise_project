@@ -1,0 +1,12 @@
+<h1>Edit Account</h1>
+<%= form_with(model: @appointment, local: true) do |f| %>
+  <div class="field">
+    <%= f.label :doctor_name %>
+    <%= f.text_field :doctor_name, required: true, placeholder: "Doctor Name" %>
+  </div>
+  <div class="field">
+    <%= f.label :time %>
+    <%= f.date_field :time, required: true %>
+  </div>
+  <%= f.submit %>
+<% end %>
